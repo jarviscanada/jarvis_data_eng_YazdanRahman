@@ -27,6 +27,9 @@ disk_available=$(df -BM / | tail -1 | awk '{print $4}' | tr -d 'M')
 # Current time in UTC format
 timestamp=$(date +"%Y-%m-%d %H:%M:%S")
 
+# Setup env var for psql cmd
+export PGPASSWORD=$psql_password
+
 # Subquery to find matching id in host_info table 
 find_host_id_stmt="(SELECT id FROM host_info WHERE hostname='$hostname')";
 

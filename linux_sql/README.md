@@ -38,7 +38,7 @@ The final phase of the project involves deploying and automating the app. This i
 In addition, the project's codebase is managed using Git and hosted with GitHub. This is to enable collaboration, version control, and easy deployment across server nodes. The GitFlow methodology is also used for a feature branch workflow to ensure a structured development process and integration of new features or bug fixes.
 
 ## Architecture
-![Architecture](/assets/Architecture.png)
+![Architecture](/linux_sql/assets/Architecture.png)
 
 ## Scripts
 ### psql_docker.sh
@@ -89,6 +89,7 @@ Example
 
 ## Database Modeling
 - `host_info`
+
 | Column Name        | Data Type | Description                  |
 |--------------------|-----------|------------------------------|
 | `id`               | SERIAL    | Unique identifier for a host |
@@ -102,6 +103,7 @@ Example
 | `total_mem`        | INT4      | Total Memory in MB           |
 
 - `host_usage`
+
 | Column Name      | Data Type | Description                               |
 |------------------|-----------|-------------------------------------------|
 | `timestamp`      | TIMESTAMP | Date and Time of collection               |
